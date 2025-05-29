@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI Soluções</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --cor-primaria: #002B5B;
+            --cor-secundaria: #004080;
+            --cor-fundo: #f4f4f4;
+            --cor-texto: #333;
+            --cor-branca: #fff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--cor-primaria);
+            color: var(--cor-branca);
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--cor-secundaria);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .menu-links { display: flex; gap: 15px; }
+        .menu-links a {
+            color: var(--cor-branca);
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .menu-links a:hover {
+            background-color: var(--cor-primaria);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger div { width: 25px; height: 3px; background: var(--cor-branca); }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            background-color: var(--cor-branca);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 { color: var(--cor-secundaria); margin-top: 20px; }
+        footer {
+            background-color: var(--cor-primaria);
+            color: var(--cor-branca);
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .redes-sociais {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .redes-sociais a { transition: transform 0.3s ease; }
+        .redes-sociais a:hover { transform: scale(1.2); }
+        img.icone { width: 32px; height: 32px; }
+        ul { padding-left: 20px; }
+        @media (max-width: 768px) {
+            .menu-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                right: 0;
+                background: var(--cor-secundaria);
+                padding: 10px 0;
+            }
+            .menu-links a { padding: 10px; text-align: center; }
+            .hamburger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>TI Soluções</h1>
+    <p>Soluções inteligentes para o seu negócio</p>
+</header>
+<nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+    </div>
+    <div class="menu-links" id="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="#politica">Política de Privacidade</a>
+        <a href="#termos">Termos de Uso</a>
+    </div>
+</nav>
+<div class="container">
+    <section id="sobre">
+        <h2>Sobre nós</h2>
+        <p>A <strong>TI Soluções</strong> é uma empresa especializada em serviços de tecnologia da informação, localizada em Caxias do Sul, na Rua Walfrida Versteg, 180.</p>
+        <p>Fundada por Leonardo Perini, nosso objetivo é oferecer soluções inovadoras para empresas de todos os tamanhos.</p>
+    </section>
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Desenvolvimento de Software</li>
+            <li>Consultoria em TI</li>
+            <li>Suporte Técnico</li>
+            <li>Infraestrutura de Redes</li>
+        </ul>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Telefone: <a href="tel:+5554996430776">(54) 99643-0776</a></p>
+        <p>Email: <a href="mailto:tisolucoes2025@gmail.com">tisolucoes2025@gmail.com</a></p>
+        <p>Endereço: Rua Walfrida Versteg, 180 - Caxias do Sul - RS</p>
+    </section>
+    <section id="politica">
+        <h2>Política de Privacidade</h2>
+        <p>Na TI Soluções, respeitamos sua privacidade e estamos comprometidos com a proteção dos seus dados pessoais. Todas as informações coletadas são usadas exclusivamente para fornecer e melhorar nossos serviços.</p>
+        <h3>Coleta de Dados</h3>
+        <p>Coletamos informações como nome, telefone e e-mail apenas com o seu consentimento, para fins de contato e prestação de serviços.</p>
+        <h3>Uso das Informações</h3>
+        <p>As informações são utilizadas exclusivamente para comunicação, envio de propostas e suporte técnico.</p>
+        <h3>Compartilhamento</h3>
+        <p>Não compartilhamos suas informações com terceiros, exceto quando exigido por lei.</p>
+        <h3>Segurança</h3>
+        <p>Adotamos medidas de segurança para proteger seus dados contra acesso não autorizado.</p>
+        <h3>Contato</h3>
+        <p>Em caso de dúvidas, entre em contato pelo e-mail: <a href="mailto:tisolucoes2025@gmail.com">tisolucoes2025@gmail.com</a>.</p>
+    </section>
+    <section id="termos">
+        <h2>Termos de Uso</h2>
+        <p>Ao acessar o site da TI Soluções, você concorda com os seguintes termos:</p>
+        <h3>Uso Permitido</h3>
+        <p>O conteúdo do site é para uso pessoal e informativo. É proibida a reprodução sem autorização.</p>
+        <h3>Responsabilidades</h3>
+        <p>Nos esforçamos para manter as informações precisas, mas não garantimos a isenção de erros.</p>
+        <h3>Alterações</h3>
+        <p>Reservamo-nos o direito de modificar estes termos a qualquer momento, sem aviso prévio.</p>
+        <h3>Legislação</h3>
+        <p>Este site é regido pelas leis brasileiras. Em caso de litígio, será competente o foro de Caxias do Sul, RS.</p>
+    </section>
+</div>
+<footer>
+    <p>&copy; 2025 TI Soluções - Todos os direitos reservados.</p>
+    <div class="redes-sociais">
+        <a href="https://www.facebook.com/profile.php?id=61564007234295&mibextid=ZbWKwLA" target="_blank"><img src="icones/facebook.png" alt="Facebook" class="icone"></a>
+        <a href="https://www.instagram.com/perini.tisolucoes/profilecard/?igsh=cmNnamEzZDVzY3M0" target="_blank"><img src="icones/instagram.png" alt="Instagram" class="icone"></a>
+        <a href="https://br.linkedin.com/in/ti-solu%C3%A7%C3%B5es-023492368" target="_blank"><img src="icones/linkedin.png" alt="LinkedIn" class="icone"></a>
+        <a href="https://wa.me/5554996430776" target="_blank"><img src="icones/whatsapp.png" alt="WhatsApp" class="icone"></a>
+    </div>
+</footer>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+}
+</script>
+</body>
+</html>
